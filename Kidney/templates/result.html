@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Result</title>
+<style>
+body{
+font-family:Arial;
+text-align:center;
+margin-top:100px;
+}
+
+.box{
+padding:30px;
+width:400px;
+margin:auto;
+border-radius:12px;
+box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+.ckd{
+background:#ffe6e6;
+color:#b30000;
+}
+
+.normal{
+background:#e6ffe6;
+color:#006600;
+} </style>
+
+</head>
+
+<body>
+
+{% if prediction == "CKD" %}
+
+<div class="box ckd">
+<h2>⚠️ Kidney Disease Detected</h2>
+<p>Please consult a doctor immediately.</p>
+</div>
+{% else %}
+<div class="box normal">
+<h2>✅ Kidney Function Normal</h2>
+<p>Maintain healthy lifestyle.</p>
+</div>
+{% endif %}
+
+<br>
+<a href="/">Go Back</a>
+
+</body>
+</html>

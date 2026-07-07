@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Kidney Disease Predictor</title>
+<style>
+body{
+font-family: Arial;
+background:#f2f6ff;
+text-align:center;
+}
+
+form{
+background:white;
+padding:30px;
+width:400px;
+margin:auto;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+input{
+width:90%;
+padding:8px;
+margin:6px;
+}
+
+button{
+padding:10px 20px;
+background:#2a6cff;
+color:white;
+border:none;
+border-radius:6px;
+} </style>
+
+</head>
+
+<body>
+
+<h1>Chronic Kidney Disease Prediction</h1>
+
+<form action="/predict" method="post">
+
+<label>Specific Gravity</label> <input name="sg" required>
+
+<label>Hemoglobin</label> <input name="hemo" required>
+
+<label>Albumin</label> <input name="al" required>
+
+<label>RBC Count</label> <input name="rc" required>
+
+<label>Hypertension (1=yes,0=no)</label> <input name="htn" required>
+
+<label>Diabetes (1=yes,0=no)</label> <input name="dm" required>
+
+<label>Appetite (1=good,0=poor)</label> <input name="appet" required>
+
+<label>Pus Cell (1=present,0=normal)</label> <input name="pc" required>
+
+<br><br> <button type="submit">Predict</button>
+
+</form>
+
+</body>
+</html>
